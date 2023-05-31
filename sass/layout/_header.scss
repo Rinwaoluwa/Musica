@@ -1,0 +1,45 @@
+// MUSICA HEADER CONTAINER
+.musica-header{
+    display: flex;
+    gap: 3%;
+
+    // CHLD CONATINER ---- INPUT SEARCH PARENT
+    &__search-container {
+        background-color: var(--light-black);
+        height: 4.6rem;
+        width: 80%;
+        padding: 0.8rem 0 0 0.6rem;
+        border-radius: 2rem;
+    }
+}
+
+// LOGO SVG STYLING
+.musica__logo{
+    height: 3rem;
+    width: 3rem;
+    
+    // INPUT SEARCH SVG STYLING 
+    &--search-icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--white);
+        opacity: 0.5;
+        position: relative;
+        top: 0.5rem;
+        margin-right: 1rem;
+    }
+}
+
+// INPUT SEARCH
+.musica__search-input {
+    outline: none;
+    background-color: var(--light-black);
+    height: 3rem;
+    width: 90%;
+    line-height: 0.8rem;
+    font-family: var(--quicksand);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    border: none;
+}

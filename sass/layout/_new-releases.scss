@@ -1,0 +1,45 @@
+.new-release {
+    &__music {
+        display: flex;
+        gap: 4.5%;
+
+        img {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 2rem;
+            scroll-snap-align: start;
+            margin-bottom: 0.2rem;
+        }
+
+        figcaption {
+
+            p {
+                opacity: 0.5;
+            }
+        }
+    }
+
+}
+
+
+// CUSTOMIZING SCROLLBAR FOR FIREFOX AND CHROME
+.scrollbar {
+    scrollbar-color: #f1f1f1 0;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track {
+    opacity: 0;
+}
+  
+  /* Thumb */
+::-webkit-scrollbar-thumb, .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #f1f1f179;
+    opacity: 0;
+    border-radius: 1rem;
+}  
+
+

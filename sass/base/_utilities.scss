@@ -1,0 +1,46 @@
+.opacity {
+    opacity: 0;
+}
+
+.margin-left {
+    margin-left: 4rem;
+}
+
+.margin-top {
+    margin-top: 4rem;
+}
+
+.margin-bottom-small {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom{
+    margin-bottom: 4rem;
+}
+
+.border-radius {
+    border-radius: 2rem;
+}
+
+//   TOP CHARTS LIKE ICON   
+.border {
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 1.2rem;
+    right: -0.490rem;
+    border-radius: 80%;
+    border: 1px solid var(--gold);
+    z-index: 10; 
+}
+
+.fill {
+    fill: var(--gold);
+}
+
+// POSITIONING LOGO TOGETHER 
+.header-position{
+    position: relative;
+    top: 1rem;
+    left: -2rem;
+}

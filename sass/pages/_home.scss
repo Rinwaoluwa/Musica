@@ -1,0 +1,21 @@
+// HOME PAGE
+.Musica {
+    background-color: var(--background);
+    padding-top: 2rem;
+}
+
+
+.new-releases {
+    margin: 2rem 0 0 6rem;
+
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type:  x mandatory;
+}
+
+.music-playing {
+    background-image: url(/images/mike-yukhtenko-wfh8dDlNFOk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+}
