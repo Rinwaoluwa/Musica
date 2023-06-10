@@ -2,31 +2,78 @@
 .musica-header{
     display: flex;
     gap: 3%;
+    align-items: center;
 
     // CHLD CONATINER ---- INPUT SEARCH PARENT
     &__search-container {
         background-color: var(--light-black);
-        height: 4.6rem;
-        width: 80%;
-        padding: 0.8rem 0 0 0.6rem;
+        width: 70%;
+        padding: 1rem 0 2rem 1rem; // top, right bottom, left
         border-radius: 2rem;
+        
+        @include respond (break-4) {
+            width: 60%;
+        }
+
+        @include respond(break-5) {
+            width: 0;
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+
+    //  NAVIGATIONS FOR MOBILE
+
+    &__mobile {
+        @include respond (break-5) {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 2rem;
+
+            &--nav {
+                margin-top: -3rem;
+                margin-right: 1.5rem;
+            }
+        }
     }
 }
 
 // LOGO SVG STYLING
 .musica__logo{
-    height: 3rem;
-    width: 3rem;
-    
-    // INPUT SEARCH SVG STYLING 
-    &--search-icon {
+    height: 6rem;
+    width: 6rem;
+
+
+    @include respond(break-7) {
         height: 2rem;
         width: 2rem;
+    }
+    // INPUT SEARCH SVG STYLING 
+    &--search-icon {
+        height: 3rem;
+        width: 3rem;
         fill: var(--white);
         opacity: 0.5;
         position: relative;
-        top: 0.5rem;
+        top: 0.6rem;
         margin-right: 1rem;
+
+        @include respond (break-5) {
+            height: 6rem;
+            width: 6rem;
+
+           position: absolute;
+           top: 6rem;
+           right: 6rem;
+        }
+
+        @include respond(break-7) {
+            height: 3rem;
+            width: 3rem;
+            top: 2.5rem;
+            right: 1rem;
+        }
     }
 }
 
@@ -34,12 +81,51 @@
 .musica__search-input {
     outline: none;
     background-color: var(--light-black);
-    height: 3rem;
-    width: 90%;
     line-height: 0.8rem;
     font-family: var(--quicksand);
-    font-size: 1.5rem;
+    font-size: max(3rem);
     font-weight: 600;
     color: var(--white);
     border: none;
+
+    @include respond (break-5) {
+       display: none;
+    }
+}
+
+
+// MOBILE NAVIGATIONS 
+.musica-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 75%;
+    padding:8rem 4rem;
+
+    background-color: var(--light-black);
+    border-top-right-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+
+
+    &__lists {
+        list-style: none;
+    }
+
+    &__list {
+        margin-bottom: 4rem;
+        span{
+            font-size: 3rem;
+            font-family: var(--quicksand);
+            color: rgba(239, 238, 224, 0.25);
+        }
+    }
+
+    &__logo{
+        height: 3rem;
+        width: 3rem;
+        fill: rgba(239, 238, 224, 0.25);
+        margin-right: 4rem;
+    }
 }

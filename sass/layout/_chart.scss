@@ -1,22 +1,36 @@
 .musica-chart {
     display: flex;
     gap: 3rem;
+    margin: 4rem;
+
+    @include respond(break-5) {
+        flex-wrap: wrap;
+    }
+
+    @include respond(break-+HD) {
+        gap: 1rem;
+    }
+
+    // CONATINER NAVIGATOR (NAVIGATOR = ICON-LINKS)
+    &__container-link {
+        width: min-content;
+    }
 
     // NAVIGATOR
     &__links{
-        // background-color: var(--black);
-        background-color: white;
-        width: 4rem;
-        padding: 1rem;
-        border-radius: 2rem;
-        
-        ul {
-            position: relative;
+        background-color: var(--light-black);
+        padding: 1.4rem;
+
+        border-radius: 3rem;
+
+        @include respond(break-5) {
+            display: none;
         }
-        // NAVIGATOR DIRECT CHILD
-        & > * {
+    
+        ul {
             list-style: none;
 
+            // NAVIGATOR DIRECT CHILD
             li{
                 &:not(:last-child){
                     margin-bottom: 1.5rem;
@@ -24,8 +38,8 @@
                 
 
                 svg{
-                    height: 2rem;
-                    width: 2rem;
+                    height: 3rem;
+                    width: 3rem;
                 }
             }
         }
@@ -34,83 +48,264 @@
     
     // MUSICA CHART AD
     &__ad{
+
         display: flex;
         position: relative;
         overflow: hidden;
 
-        height: 30rem;
-        // width: 65%;
-        width: 62vw;
+        min-width: 65%; 
         background-color: var(--blue);
+         
+        @include respond(break-5) {
+            width: 100vh;
+            flex: 1 1 0;
+        }
 
+        @include respond (break-7) {
+           margin-left: -2.5rem;
+           min-width: 93vw;
+        }
+
+        //  CHART AD DIRECT CHILDREN
         & > *{
             color:  var(--white);
             font-family: var(--quicksand);
         }
 
-    }
+        h5 {
+            font-size: 1.5rem;
+            
+            @include respond(break-5) {
+                margin-bottom: 25rem;
+            }
 
+            @include respond (break-7) {
+                margin-bottom: 8rem;
+            }
+        }
+
+        h1 ,p ,div {
+            @include respond(break-4) {
+                width: 100%;
+            }
+        }
+
+        b {
+            @include respond(break-5) {
+               font-size: 6rem;
+            }
+        }
+
+    }
+    
+    // CHART AD LIKES COUNT 
+    &__likes-count {
+        display: flex;
+        gap: 2%;
+
+        svg {
+            height: 2rem;
+            width: 2rem;
+            fill: var(--white);
+
+            @include respond(break-5) {
+                height: 3rem;
+                width: 3rem;
+                margin-bottom: 4rem;
+            }
+
+            @include respond(break-7) {
+                height: 2rem;
+                width: 2rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+    }
 
     &__img {
 
         &::before{
             content: url(/images/Pexels\ Photo\ by\ Eric\ Esma.png);
             position: absolute;
-            top: -10.9rem;
-            right: 5%;
+            top: -17rem;
+            right: 0;
             z-index: 10;
             
-            transform: scale(1.3);
+            transform: scale(1.25);
+
+            @include respond(break-6) {
+                transform: scale(1);
+                top: -25rem;
+                right: -6rem;
+            }
+        
+            @include respond(break-5) {
+                content: '';
+            }
         }
 
         &--1 {
             position: absolute;
             right: 10%;
             transform: scale(1.7);
+
+            @include respond(break-4) {
+                transform: scale(1.4);
+            }
+
+            @include respond(break-5) {
+                transform: rotate(-80deg);
+                top: 1.8rem;
+                right: -11rem;
+            }
+
+            @include respond(break-8) {
+                transform:rotate(-80deg) scale(0.5);
+                top: -13rem;
+                right: -28rem;
+            }
         }
+
     }
 }
 
 .top-charts {
-    width: 24%;
-    
-    &__list {
-        display: flex;
-        margin-bottom: 1rem;
-        background-color: var(--light-black);
-        padding: 3%;
-        border-radius: 1rem;
-    }
+    min-width: 28%; 
 
-    figcaption {
-        display: flex;
-        gap: 4rem;
-        margin-left: 1rem; 
+    @include respond(break-5) {  
+       display: grid;
+       grid-auto-flow: column;
+       grid-auto-columns: 40rem;
+       gap: 2rem;
+       overflow-x: scroll;
+       overscroll-behavior-inline: contain ;
         
-        div {
-            min-width: 50%;
+       
+        //  TOP CHART --SECTION TEXT--
+        h1 {
+            position: absolute;
         }
 
-        aside {
-            position: relative;
-            margin-left: 2rem;
-        }
-        svg {
-            height: 1.5rem;
-            width: 1.5rem;
-            position: relative;
-            top: 1.8rem;
+        figure {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 4rem;
+            // MUSIC TITLE TEXT  
+            h1 {
+                position: relative;
+                width: max-content;
+                margin-bottom: 0.5rem;
+            }
+            
+            figcaption {
+                flex: 1 1 0;
+                
+                order: 2;
+    
+                & > *{
+                    font-size: 1.5rem;
+                }
+                p {
+                    opacity: 0.5;
+                    margin-bottom: 2rem;
+                }
+        
+            }   
         }
     }
     
+    //  TOP CHARTS FIGURE, FIGCAPTION 
+    &__list {
+        flex: 1 1 0;
+
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        background-color: var(--light-black);
+        padding:4% 6%;
+        border-radius: 2rem;
+    
+
+        //  CURSOR TO POINTER ON HOVER
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include respond (break-4) {
+            gap: 1rem;
+            border-radius: 1rem;
+        }
+
+        @include respond(break-7) {
+            gap: 0.5rem;
+            width: 70vw;
+        }
+
+        figcaption {
+            width: 65%;
+
+            @include respond(break-4) {
+                margin-right: 1rem;
+                min-width: 50%;
+
+            }
+
+            @include respond(break-7) {
+                margin-right: 0;
+                min-width: 30%;
+            }
+        }
+    
+        
+    }
+    aside {
+        border-radius: 50%;
+        -moz-outline-radius: 50%;
+        outline: 0.3px solid var(--gold);
+        outline-offset: 0.8rem;
+        height: 2rem;
+        width: 2rem;
+        margin-top: 2rem;
+
+
+        svg {
+            height: 2rem;
+            width: 2rem; 
+
+            &:hover{
+                animation: scale 0.4s ease-out;
+            }
+
+            @include respond(break-4) {
+                height: 1.5rem;
+                width: 1.5rem; 
+            }
+        }
+
+        @include respond(break-4) {
+            height: 1.5rem;
+            width: 1.5rem; 
+        }
+
+        @include respond(break-5) {
+            transform: translateX(10rem); 
+        }
+    }
+
     &__img {
-        height: 4rem;
-        // width: 4rem;
-        max-width: 6rem;
+        max-width: 7rem;
         border-radius: 1rem;
         flex: 1 1 0;
+
+        @include respond(break-4) {
+            max-width: 6rem;
+        }
+
+        @include respond(break-5) {
+            max-width: 8rem;
+            flex: 1;
+        }
     }
-
-
 }
 

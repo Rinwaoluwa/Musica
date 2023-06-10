@@ -1,12 +1,111 @@
 .musica__play {
+    display: flex;
+    gap: 30%;
 
-// CONTROLL NAVIGATION ICON FOR WHEN PLAYING MUSIC
+    @include respond(break-4) {
+        gap: 15%;
+    }
 
+    @include respond(break-6) {
+        gap: 5%;
+    }
+
+    figure {
+        width: 100%;
+
+        @include respond(break-8) {
+            display: grid;
+            grid-auto-flow: row;
+        }
+        
+        figcaption {
+            width: 100%;
+        }
+    }
+
+// CONTROL NAVIGATION ICON FOR WHEN PLAYING MUSIC
     &--icon {
+        margin-top: 1rem;
+        margin-right: 2rem;
+
+        @include respond(break-6) {
+            margin-right: 1rem;
+        }
+
+        
         svg {
             height: 2rem;
             width: 2rem;
-            fill: white;
+            fill: var(--white);
+
+            @include respond(break-8) {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+
+        &-1 {
+            background-color: var(--gold);
+            border-radius: 50%;
+            padding: 0.8rem;
+            position: relative;
+            z-index: 10;
+
+            svg {
+                height: 1.5rem;
+                width: 1.5rem;
+
+                @include respond(break-8) {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                }
+            }
         }
     }
 } 
+
+.musica__volumne {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    svg {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--white);
+    }
+}
+
+.musica__progress-bar {
+    margin: 2rem auto;
+    height: 0.5rem;
+    width: 40%;
+    background-color: var(--opaque-white);
+    border-radius: 2rem;
+
+    position: relative;
+
+    &--1{
+        margin: 0;
+        margin-left: 0.5rem;
+    }
+}
+  
+.musica__progress {
+    height: 100%;
+    width: 40%;
+    background-color: var(--gold);
+    border-radius: 2rem;
+    position: absolute;
+
+    &--dot {
+        position: absolute;
+        right: 0;
+        background-color: var(--gold);
+        outline: 0.1rem solid var(--white);
+        outline-offset: 0.4rem;
+        border-radius: 50%;
+        height: 1rem;
+        width: 1rem;
+    }
+}

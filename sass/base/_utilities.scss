@@ -7,7 +7,7 @@
 }
 
 .margin-top {
-    margin-top: 4rem;
+    margin-top: 4rem; 
 }
 
 .margin-bottom-small {
@@ -18,29 +18,47 @@
     margin-bottom: 4rem;
 }
 
-.border-radius {
-    border-radius: 2rem;
+.margin-bottom-large{
+    margin-bottom: 8rem;
+
+    @include respond (break-4) {
+        margin-bottom: 6rem;
+    }
 }
 
-//   TOP CHARTS LIKE ICON   
-.border {
-    position: absolute;
-    height: 2.5rem;
-    width: 2.5rem;
-    top: 1.2rem;
-    right: -0.490rem;
-    border-radius: 80%;
-    border: 1px solid var(--gold);
-    z-index: 10; 
+.border-radius {
+    border-radius: 6rem;
+}
+
+.invisible {
+    display: none;
 }
 
 .fill {
-    fill: var(--gold);
+    fill: var(--gold) !important; 
+}
+
+.color {
+    color: var(--white) !important;
 }
 
 // POSITIONING LOGO TOGETHER 
 .header-position{
     position: relative;
-    top: 1rem;
-    left: -2rem;
+    top: 1.5rem;
+    left: -3.5rem;
+
+    @include respond(break-7) {
+        top: 0.7rem;
+        left: -1.4rem;
+    }
+}
+
+// TO ADD ANIMATION 
+.slider {
+    animation: slide-in 0.5s ease-in-out;
+}
+
+.scale {
+    animation: scale 0.4s ease-out;
 }

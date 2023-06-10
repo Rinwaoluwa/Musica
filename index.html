@@ -11,6 +11,15 @@
 <body>
     <main class="Musica">
         <header class="musica-header margin-left"> 
+            <div class="musica-header__mobile invisible">
+                <svg class="musica__logo"> 
+                    <use href="images/sprite.svg#horizontal-line"></use>
+                </svg>
+
+                <svg class="musica__logo musica-header__mobile--nav"> 
+                    <use href="images/sprite.svg#horizontal-line"></use>
+                </svg>
+            </div>
             <div class="music-header__logo">
                 <svg class="musica__logo"> 
                     <use href="images/sprite.svg#musica-note-1"></use>
@@ -28,8 +37,8 @@
             </div>
         </header>
 
-        <section class="musica-chart margin-top margin-left"> 
-            <div>
+        <section class="musica-chart"> 
+            <div class="musica-chart__container-link">
                 <nav class="musica-chart__links border-radius">
                     <ul>
                         <li class="musica-chart__links--1">
@@ -84,17 +93,17 @@
             </div>
             <article class="musica-chart__ad border-radius">
                 <div class="margin-top margin-left">
-                    <h5 class="text-paragraph text-paragraph--1 margin-bottom">Curated PlayList</h5>
+                    <h5 class="text-paragraph text-paragraph--1 margin-bottom-large">Curated PlayList</h5>
 
                     <h1 class="text-bold margin-bottom-small"><b class="text-bold">R & B Hits</b></h1>
 
-                    <p class="text-paragraph text-paragraph--2 margin-bottom">All mine, Lie again, Petty call me everyday, <br> Out of time, No love, Bad habit, <br> and so much more </p>
+                    <p class="text-paragraph text-paragraph--2 margin-bottom-large">All mine, Lie again, Petty call me everyday, <br> Out of time, No love, Bad habit, <br> and so much more </p>
 
-                    <div>
-                        <!-- <svg>
-                            <use href="images/sprite.svg#icon-location"></use>
-                        </svg> -->
-                            <h2 class="text-paragraph text-paragraph--3">33K Likes</h2>
+                    <div class="musica-chart__likes-count">
+                        <svg class="musica__logo" > 
+                            <use href="images/sprite.svg#icon-heart"></use>
+                        </svg>
+                        <h2 class="text-paragraph text-paragraph--3">33K Likes</h2>
                     </div>
 
                 </div>
@@ -103,68 +112,264 @@
                 </figure>
             </article>
 
-            <article class="top-charts">
+            <article class="top-charts scrollbar">
                 <h1 class="text-bold margin-bottom-small">Top Charts</h1>
-
                 <figure class="top-charts__list">
                     <img src="images/Rectangle 20.png" alt="Maybe Image of Album" class="top-charts__img">
-                    <figcaption>
-                        <div class="text-paragraph">
-                            <h1>Golden age of 80s</h1>
-                            <p>Sean Swaddler</p>
-                            <h5>2:34:45</h5>
-                        </div> 
-
-                        <aside>
-                            <svg class="musica__logo fill" > 
-                                <use href="images/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="border"></span>
-                        </aside>
-                        
+                    <figcaption class="text-paragraph">
+                        <h1>Golden age of 80s</h1>
+                        <p>Sean Swaddler</p>
+                        <h5>2:34:45</h5>
                     </figcaption>
+
+                    <aside>
+                        <svg class="musica__logo fill top-charts__svg" > 
+                            <use href="images/sprite.svg#icon-heart"></use>
+                        </svg>
+                    </aside>
                 </figure>
 
                 <figure class="top-charts__list">
                     <img src="images/Rectangle 20.png" alt="Maybe Image of Album" class="top-charts__img">
-                    <figcaption>
-                        <div class="text-paragraph">
-                            <h1>Reggae 'n' Bluess</h1>
-                            <p>Dj Yk</p>
-                            <h5>1:40:55</h5>
-                        </div>
 
-                        <aside>
-                            <svg class="musica__logo" > 
-                                <use href="images/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="border"></span>
-                        </aside>
+                    <figcaption class="text-paragraph">
+                        <h1>Reggae 'n' Bluess</h1>
+                        <p>Dj Yk</p>
+                        <h5>1:40:55</h5>
                     </figcaption>
+
+                    <aside>
+                        <svg class="musica__logo" > 
+                            <use href="images/sprite.svg#icon-heart"></use>
+                        </svg>
+                    </aside>
                 </figure>
 
                 <figure class="top-charts__list">
                     <img src="images/Rectangle 17.png" alt="Maybe Image of Album" class="top-charts__img">
-                    <figcaption>
-                        <div class="text-paragraph">
-                            <h1>Tomorrows Tunes</h1>
-                            <p>Tobyy</p>
-                            <h5>34:45</h5>
-                        </div>
 
-                        <aside>
-                            <svg class="musica__logo" > 
-                                <use href="images/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="border"></span>
-                        </aside>
+                    <figcaption class="text-paragraph">  
+                        <h1>Tomorrows Tunes</h1>
+                        <p>Tobyy</p>
+                        <h5>34:45</h5>   
                     </figcaption>
+                    <aside>
+                        <svg class="musica__logo" > 
+                            <use href="images/sprite.svg#icon-heart"></use>
+                        </svg>
+                    </aside>
                 </figure>
             </article>
         </section>
 
         <section class="new-releases scrollbar">
-            <h1 class="text-paragraph">New releases.</h1>
+            <h1 class="text-paragraph margin-bottom-small">New releases.</h1>
+
+            <aside class="new-release__music">
+                <figure>
+                    <img src="images/Rectangle 16.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>    
+
+                <figure>
+                    <img src="images/Rectangle 18.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>    
+
+                <figure>
+                    <img src="images/Rectangle 15.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+                
+                <figure>
+                    <img src="images/Rectangle 28.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 18.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 20.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 29.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 20.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+            </aside>
+        </section>
+
+        <section class="new-releases scrollbar">
+            <h1 class="text-paragraph margin-bottom-small">New releases.</h1>
+
+            <aside class="new-release__music">
+                <figure>
+                    <img src="images/Rectangle 16.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>    
+
+                <figure>
+                    <img src="images/Rectangle 18.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>    
+
+                <figure>
+                    <img src="images/Rectangle 15.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+                
+                <figure>
+                    <img src="images/Rectangle 28.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 18.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 20.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 29.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 20.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+
+                <figure>
+                    <img src="images/Rectangle 27.png" alt="">
+                    <figcaption>
+                       <h3 class="text-paragraph">Life in a Bubble</h3>
+                       <p class="text-paragraph margin-bottom-small">The vann</p>
+                    </figcaption>
+                </figure>   
+            </aside>
+        </section>
+
+        
+
+        <section class="new-releases scrollbar">
+            <h1 class="text-paragraph margin-bottom-small">Popular in your area.</h1>
 
             <aside class="new-release__music">
                 <figure>
@@ -287,7 +492,7 @@
                                 <use href="images/sprite.svg#icon-previous"></use>
                             </svg>
                         </li>
-                         <li class="musica__play--icon">
+                         <li class="musica__play--icon musica__play--icon-1">
                             <svg> 
                                 <use href="images/sprite.svg#icon-play3"></use>
                             </svg>
@@ -305,20 +510,75 @@
                     </ul>
                 </nav>
     
-                <nav class="text-paragraph">
+                <nav class="musica__volumne text-paragraph">
                     <svg class="musica__logo"> 
                         <use href="images/sprite.svg#icon-volume-high"></use>
                     </svg>
-                    Volume Up or Down
+
+                    <div class="musica__progress-bar musica__progress-bar--1">
+                        <div class="musica__progress">
+                        </div>
+                    </div>
                 </nav>
     
             </main>
 
-            <aside class="musica__progress">
-                <div class="musica__progress-bar text-paragraph">---- Progress Bar -----</div>
-                <p class="text-paragraph">&copy; 2023 By rinwwaoluwa. All rights reserved.</p>
-            </aside>
+            <div class="musica__progress-bar">
+                <div class="musica__progress">
+                    <div class="musica__progress--dot">&nbsp;</div>
+                </div>
+            </div>
+            <p class="text-paragraph">&copy; 2023 By rinwwaoluwa. All rights reserved.</p>
         </footer>
+
+        <nav class="musica-mobile invisible">
+
+            <ul class="musica-mobile__lists">
+
+                <li class="musica-mobile__list">
+                    <svg class="musica-mobile__logo fill"> 
+                        <use href="images/sprite.svg#icon-home"></use>
+                    </svg>
+
+                    <span class="color">Home</span>
+                </li>
+                <li class="musica-mobile__list">
+                    <svg class="musica-mobile__logo"> 
+                        <use href="images/sprite.svg#icon-headphones"></use>
+                    </svg>
+
+                    <span>Libary</span>
+                </li>
+                <li class="musica-mobile__list">
+                    <svg class="musica-mobile__logo"> 
+                        <use href="images/sprite.svg#icon-podcast"></use>
+                    </svg>
+
+                    <span>Podcast</span>
+                </li>
+                <li class="musica-mobile__list">
+                    <svg class="musica-mobile__logo"> 
+                        <use href="images/sprite.svg#icon-youtube"></use>
+                    </svg>
+
+                    <span>Video</span>
+                </li>
+                <li class="musica-mobile__list">
+                    <svg class="musica-mobile__logo"> 
+                        <use href="images/sprite.svg#icon-user"></use>
+                    </svg>
+
+                    <span>Profile</span>
+                </li>
+                <li class="musica-mobile__list">
+                    <svg class="musica-mobile__logo"> 
+                        <use href="images/sprite.svg#icon-exit"></use>
+                    </svg>
+
+                    <span>Logout</span>
+                </li>
+            </ul>
+        </nav>
     </main>
 </body>
 

@@ -4,8 +4,7 @@
         gap: 4.5%;
 
         img {
-            height: 10rem;
-            width: 10rem;
+            height: 15rem;
             border-radius: 2rem;
             scroll-snap-align: start;
             margin-bottom: 0.2rem;
@@ -17,15 +16,29 @@
                 opacity: 0.5;
             }
         }
+
+         //  ON HOVER CURSOR IS POINTER
+    figure:hover {
+        cursor: pointer;
+    }
     }
 
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        display: none;
+    }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        display: none;
+    }
 }
 
 
 // CUSTOMIZING SCROLLBAR FOR FIREFOX AND CHROME
 .scrollbar {
-    scrollbar-color: #f1f1f1 0;
-    scrollbar-width: thin;
+    scrollbar-width: none; /* Firefox 64+ */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
 ::-webkit-scrollbar {
@@ -33,6 +46,7 @@
 }
 ::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track {
     opacity: 0;
+    display: none;
 }
   
   /* Thumb */
@@ -40,6 +54,7 @@
     background-color: #f1f1f179;
     opacity: 0;
     border-radius: 1rem;
+    display: none;
 }  
 
 

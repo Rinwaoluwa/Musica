@@ -2,6 +2,7 @@
 .Musica {
     background-color: var(--background);
     padding-top: 2rem;
+    position: relative;
 }
 
 
@@ -11,11 +12,28 @@
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
     scroll-snap-type:  x mandatory;
+
+    @include respond(break-5) {
+        margin: 0.5rem 0 0 2rem;
+    }
 }
 
 .music-playing {
-    background-image: url(/images/mike-yukhtenko-wfh8dDlNFOk-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 1rem;
+    background-color: var(--opaque-white);
+    padding: 1rem;  
+
+    position: fixed;
+    min-width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+
+    transition: backdrop-filter .3s ease-out;
+    &:hover, &a:active {
+        backdrop-filter: blur(1rem) brightness(80%);
+    }
+
+    @include respond(break-5) {
+        backdrop-filter: blur(1rem) brightness(80%);
+    }
 }

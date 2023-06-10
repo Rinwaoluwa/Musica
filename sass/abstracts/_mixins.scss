@@ -1,0 +1,39 @@
+
+// MEDIA-QUERY MANAGER
+@mixin respond($breakpoint) {
+
+    // POINTS WHERE DESIGN BREAKS 
+
+    // LARGER MOBILE SCREENS 
+    @if $breakpoint == break-4 {
+        @media (max-width: 68.3em) { @content };  // 1092px & <
+    }
+    
+    @if $breakpoint == break-6 {
+        @media (max-width: 63.75em) { @content };  // 1020px & <
+    }
+
+    //  SMALL MOBILE SCREENS
+    @if $breakpoint == break-5 {
+        @media (max-width: 52.8em) { @content };  // 844px & <
+    }
+
+    @if $breakpoint == break-7 {
+        @media (max-width: 24.8em) { @content };  // 396px & <
+    }
+
+    @if $breakpoint == break-8 {
+        @media (max-width: 28.8em) { @content };  // 461px & <
+    }
+
+
+    
+    // EXTRA-LARGE SCREENS HD & >
+    @if $breakpoint == break-+HD {
+        @media (min-width: 64em) { @content }; // 1080px & > 
+    }
+}
+
+/* @include respond(break-1) {
+    font-size: 50%;
+}*/
