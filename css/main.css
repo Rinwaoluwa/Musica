@@ -356,7 +356,7 @@ body {
     flex: 1 1 0;
   }
 }
-@media (max-width: 24.8em) {
+@media (max-width: 28.8em) {
   .musica-chart__ad {
     margin-left: -2.5rem;
     min-width: 93vw;
@@ -374,7 +374,7 @@ body {
     margin-bottom: 25rem;
   }
 }
-@media (max-width: 24.8em) {
+@media (max-width: 28.8em) {
   .musica-chart__ad h5 {
     margin-bottom: 8rem;
   }
@@ -452,8 +452,8 @@ body {
 @media (max-width: 28.8em) {
   .musica-chart__img--1 {
     transform: rotate(-80deg) scale(0.5);
-    top: -13rem;
-    right: -28rem;
+    top: -9rem;
+    right: -20rem;
   }
 }
 
@@ -513,10 +513,11 @@ body {
     border-radius: 1rem;
   }
 }
-@media (max-width: 24.8em) {
+@media (max-width: 28.8em) {
   .top-charts__list {
     gap: 0.5rem;
     width: 70vw;
+    flex: 0 1 0;
   }
 }
 .top-charts__list figcaption {
@@ -528,7 +529,7 @@ body {
     min-width: 50%;
   }
 }
-@media (max-width: 24.8em) {
+@media (max-width: 28.8em) {
   .top-charts__list figcaption {
     margin-right: 0;
     min-width: 30%;
@@ -536,16 +537,19 @@ body {
 }
 .top-charts aside {
   border-radius: 50%;
-  -moz-outline-radius: 50%;
-  outline: 0.3px solid var(--gold);
-  outline-offset: 0.8rem;
   height: 2rem;
   width: 2rem;
   margin-top: 2rem;
+  border: 0.3px solid var(--gold);
+  padding: 1.5rem;
 }
 .top-charts aside svg {
   height: 2rem;
   width: 2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .top-charts aside svg:hover {
   animation: scale 0.4s ease-out;
@@ -580,7 +584,6 @@ body {
 @media (max-width: 52.8em) {
   .top-charts__img {
     max-width: 8rem;
-    flex: 1;
   }
 }
 
@@ -676,14 +679,13 @@ body {
     gap: 5%;
   }
 }
+@media (max-width: 28.8em) {
+  .musica__play {
+    padding: 2rem 0.5rem;
+  }
+}
 .musica__play figure {
   width: 100%;
-}
-@media (max-width: 28.8em) {
-  .musica__play figure {
-    display: grid;
-    grid-auto-flow: row;
-  }
 }
 .musica__play figure figcaption {
   width: 100%;
@@ -697,6 +699,11 @@ body {
     margin-right: 1rem;
   }
 }
+@media (max-width: 28.8em) {
+  .musica__play--icon {
+    margin: 0;
+  }
+}
 .musica__play--icon svg {
   height: 2rem;
   width: 2rem;
@@ -704,8 +711,7 @@ body {
 }
 @media (max-width: 28.8em) {
   .musica__play--icon svg {
-    height: 3rem;
-    width: 3rem;
+    display: none;
   }
 }
 .musica__play--icon-1 {
@@ -718,11 +724,26 @@ body {
 .musica__play--icon-1 svg {
   height: 1.5rem;
   width: 1.5rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @media (max-width: 28.8em) {
   .musica__play--icon-1 svg {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    margin: 0;
+  }
+}
+@media (max-width: 28.8em) {
+  .musica__play--icon-2 svg {
+    display: block;
     height: 2.5rem;
     width: 2.5rem;
+    position: relative;
+    top: 0.3rem;
   }
 }
 
@@ -732,10 +753,20 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 28.8em) {
+  .musica__volumne {
+    display: none;
+  }
+}
 .musica__volumne svg {
   height: 2rem;
   width: 2rem;
   fill: var(--white);
+}
+@media (max-width: 28.8em) {
+  .musica__volumne svg {
+    display: none;
+  }
 }
 
 .musica__progress-bar {
@@ -745,6 +776,11 @@ body {
   background-color: var(--opaque-white);
   border-radius: 2rem;
   position: relative;
+}
+@media (max-width: 28.8em) {
+  .musica__progress-bar {
+    display: none;
+  }
 }
 .musica__progress-bar--1 {
   margin: 0;
